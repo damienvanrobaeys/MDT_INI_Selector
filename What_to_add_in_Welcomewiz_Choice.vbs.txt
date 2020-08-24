@@ -1,0 +1,12 @@
+At the beginning, below Dim sSelectedBtn
+
+
+Dim DeployRoot_Folder, TS_Select_INI_Tool, shell, SkipINISelector_value
+DeployRoot_Folder = oEnvironment.Item("DeployRoot")
+SkipINISelector_value = oEnvironment.Item("SkipINISelector")
+	
+TS_Select_INI_Tool = DeployRoot_Folder & "\INI Selector.exe"			
+Set shell = CreateObject("WScript.Shell")
+shell.Run Chr(34) & TS_Select_INI_Tool  & Chr(34), 1, false
+Set shell = Nothing		
+oEnvironment.Item("ContinueDeployment") = "NO"

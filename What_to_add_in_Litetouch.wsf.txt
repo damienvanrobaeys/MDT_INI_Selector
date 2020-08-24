@@ -1,0 +1,8 @@
+Below oEnvironment.Item("LTIFirstTime") = "NO"
+and 
+Above oLogging.ReportProgress "Initializing.", 1
+
+
+Do While oEnvironment.Item("ContinueDeployment") = "NO"
+	WScript.Sleep 200
+Loop		
