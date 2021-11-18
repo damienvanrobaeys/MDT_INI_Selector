@@ -1,0 +1,7 @@
+<job id="MDT_OSD_FrontEnd_FlushVariables">
+	<script language="VBScript" src="ZTIUtility.vbs"/> 
+    <script language="VBScript"> 
+	MyProfile = WScript.Arguments(0)		
+	oEnvironment.Item("RulesFile") = MyProfile	
+    </script>
+</job>
